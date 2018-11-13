@@ -1,15 +1,19 @@
 <!doctype html>
-<html ng-app ng-init="pokemon=['Picaku', 'Charizard', 'Venusar']">
+<html >
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
   </head>
-  <body>
-    <div>
-      
-        <!-- list of pokemon characters -->
-        <li ng-repeat="pokemon in pokemon">
-            {{pokemon}}
-        </li>
+  <body ng-app="pokemonApp">
+   
+
+    <div ng-controller="pokemonController">
+        {{intro}}
+
+        <div ng-repeat="pokemon in pokemonCharacters">
+            <p>{{pokemon.name}}</p>
+        </div>
     </div>
+
+    <script src="controllers/pokemon-controller.js"></script>
   </body>
 </html>
