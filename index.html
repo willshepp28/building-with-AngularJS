@@ -2,6 +2,7 @@
 <html >
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body ng-app="pokemonApp">
    
@@ -11,6 +12,8 @@
 
         <div ng-repeat="pokemon in pokemonCharacters">
             <p>{{pokemon.name}}</p>
+            <img class="mb-5" src="{{pokemon.image}}" alt="image of a {{pokemon.name}}">
+          
         </div>
     </div>
 
