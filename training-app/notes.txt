@@ -1,1 +1,4 @@
-Angular JS fundamentals
+ANGULAR JS TUTORIAL
+
+Model = is what defines our data
+View = what users see
