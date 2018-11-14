@@ -11,3 +11,18 @@ $scope = is a object, that you can add variables and functions too.
 
 $scope is a service that is apart of the core angular module
 
+Interpolation: creating a string by combining strings and placeholders.
+
+Directive: an instruction to angularjs to manipulate a piece of the dom
+
+Two-way Data Binding: when the view updates the model, and the model updates the view.
+
+
+
+WATCHERS AND DIGEST
+
+On top of the javascript event loop we have the angular context that watches. 
+
+Watchlist: every time you put binding, interpolation, variable , or function thats is on the scope to the html page. Angular adds a watcher.
+The part of it watching, and checking for changes is inside the digest loop or digest cycle. 
+When you enter into a digest cycle, it asks the question has something changed. If something has changed it updates everything thats connected to it.

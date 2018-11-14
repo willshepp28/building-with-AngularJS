@@ -15,7 +15,15 @@
 
 
     <div ng-controller="mainController">
-        <form name="myForm">
+        <h1>Hello {{name}}</h1>
+
+        <div>
+            <label for="">What is your twitter handle?</label>
+            <input type="text" ng-model="url">
+
+            <h1>twitter.com/{{url | lowercase}}</h1>
+        </div>
+        <!-- <form name="myForm">
             <label>
                 Enter text:
                 <input type="email" ng-model="field" name="myField" required maxlength="15" />
@@ -25,7 +33,7 @@
                 <div ng-message="email">This field must be a valid email address.</div>
                 <div ng-message="maxlength">This field can be at most 15 characters long.</div>
             </div>
-        </form>
+        </form> -->
     </div>
     <script src="https://code.angularjs.org/1.7.5/angular-messages.min.js"></script>
     <script src="https://code.angularjs.org/1.7.5/angular-resource.min.js"></script>
