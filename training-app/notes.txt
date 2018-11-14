@@ -2,3 +2,12 @@ ANGULAR JS TUTORIAL
 
 Model = is what defines our data
 View = what users see
+
+Dependency Injection : giving a function an object, rather than creating a object inside a function , you pass it to the function.
+
+All angular js services start with a dollar sign ($)
+
+$scope = is a object, that you can add variables and functions too.
+
+$scope is a service that is apart of the core angular module
+
