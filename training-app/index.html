@@ -21,19 +21,18 @@
             <label for="">What is your twitter handle?</label>
             <input type="text" ng-model="url">
 
+            <div class="alert" ng-class="{ 'alert-warning': url.length < 5}" ng-if="url.length < 5">
+                Must be 5 characters
+            </div>
+
             <h1>twitter.com/{{url | lowercase}}</h1>
         </div>
-        <!-- <form name="myForm">
-            <label>
-                Enter text:
-                <input type="email" ng-model="field" name="myField" required maxlength="15" />
-            </label>
-            <div ng-messages="myForm.myField.$error" role="alert">
-                <div ng-message="required">Please enter a value for this field.</div>
-                <div ng-message="email">This field must be a valid email address.</div>
-                <div ng-message="maxlength">This field can be at most 15 characters long.</div>
-            </div>
-        </form> -->
+
+<button class="btn btn-primary" ng-click="sayMyName()">Click here Me!</button>
+
+      
+
+
     </div>
     <script src="https://code.angularjs.org/1.7.5/angular-messages.min.js"></script>
     <script src="https://code.angularjs.org/1.7.5/angular-resource.min.js"></script>

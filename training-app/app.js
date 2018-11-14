@@ -11,6 +11,10 @@ myApp.controller("mainController", ["$scope", "$log", "$timeout", function($scop
         $scope.name = "World";
     }, 3000);
 
+    $scope.sayMyName = function(){
+        alert("Hey " + $scope.name);
+    }
+
     $log.log($scope.name);
     $log.info($scope.formattedname)
 }]);

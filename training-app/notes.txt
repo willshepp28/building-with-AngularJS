@@ -26,3 +26,21 @@ On top of the javascript event loop we have the angular context that watches.
 Watchlist: every time you put binding, interpolation, variable , or function thats is on the scope to the html page. Angular adds a watcher.
 The part of it watching, and checking for changes is inside the digest loop or digest cycle. 
 When you enter into a digest cycle, it asks the question has something changed. If something has changed it updates everything thats connected to it.
+
+
+$scope.apply() : means apply what i want to happen in this function to the digest loop.
+
+
+
+COMMON DIRECTIVES
+
+ng-if : returns true or false. Completely removes element from the dom.
+ng-show : shows if a boolean expression is true. But doesnt remove element from the dom.
+ng-hide:  hides element based on boolean expression. Remains on the dom.
+ng-class: to add elements based on conditions.
+ng-repeat: allows us to iterate over a collection of data. And display in it the dom.
+ng-click: allows of to specify custome behaviro when a element is clicked. 
+ng-cloak: prevents element from being displayed in the browser until loaded.
+
+
+
