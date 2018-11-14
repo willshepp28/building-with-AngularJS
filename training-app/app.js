@@ -15,6 +15,10 @@ myApp.controller("mainController", ["$scope", "$log", "$timeout", "$http", funct
         alert("Hey " + $scope.name);
     }
 
+    $scope.newUser = {
+        name: "Tony",
+        role: "user"
+    };
 
     $http({
         method: "GET",
@@ -25,7 +29,24 @@ myApp.controller("mainController", ["$scope", "$log", "$timeout", "$http", funct
             $scope.users = response.data;
         }, function (error) {
             $log.log(error);
+        });
+
+
+        $http({
+            method: "POST",
+            url: "http://localhost:3000/api/v1/users",
+            data: $scope.newUser
         })
+            .then(function (response) {
+                $log.log(response.data);
+                $scope.users = response.data;
+            }, function (error) {
+                $log.log(error);
+            });
+    
+
+
+
 
 }]);
 
