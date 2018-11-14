@@ -43,4 +43,10 @@ ng-click: allows of to specify custome behaviro when a element is clicked.
 ng-cloak: prevents element from being displayed in the browser until loaded.
 
 
+External Data and $http
+
+
+
+
+
 

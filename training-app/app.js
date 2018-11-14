@@ -2,21 +2,31 @@ var myApp = angular.module("myApp", ["ngMessages", "ngResource"]); // take the n
 
 
 // Declare a controller
-myApp.controller("mainController", ["$scope", "$log", "$timeout", function($scope, $log, $timeout){
-    
+myApp.controller("mainController", ["$scope", "$log", "$timeout", "$http", function ($scope, $log, $timeout, $http) {
+
     $scope.name = "Will";
     $scope.url = "";
-  
-    $timeout(function(){
+
+    $timeout(function () {
         $scope.name = "World";
     }, 3000);
 
-    $scope.sayMyName = function(){
+    $scope.sayMyName = function () {
         alert("Hey " + $scope.name);
     }
 
-    $log.log($scope.name);
-    $log.info($scope.formattedname)
+
+    $http({
+        method: "GET",
+        url: "http://localhost:3000/api/v1/users"
+    })
+        .then(function (response) {
+            $log.log(response.data);
+            $scope.users = response.data;
+        }, function (error) {
+            $log.log(error);
+        })
+
 }]);
 
 
