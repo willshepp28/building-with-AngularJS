@@ -1,4 +1,4 @@
-var myApp = angular.module("myApp", []); // take the name of the app and a array of dependencies
+var myApp = angular.module("myApp", ["ngMessages"]); // take the name of the app and a array of dependencies
 
 
 // Declare a controller
