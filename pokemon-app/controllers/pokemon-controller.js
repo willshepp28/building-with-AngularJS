@@ -12,3 +12,18 @@ pokemonApp.controller("pokemonController", function($scope) {
 
 
 });
+
+
+pokemonApp.controller("getPokemon", function($scope, $http) {
+    $http({
+        method: "GET",
+        url: "https://pokeapi.co/api/v2/generation/"
+    })
+    .then(function success(response) {
+        console.log(response);
+    },
+    function error(response){
+        console.log(response);
+    })
+    
+})

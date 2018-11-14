@@ -11,10 +11,14 @@
         {{intro}}
 
         <div ng-repeat="pokemon in pokemonCharacters">
-            <p>{{pokemon.name}}</p>
+            <p>{{pokemon.name | uppercase}}</p>
             <img class="mb-5" src="{{pokemon.image}}" alt="image of a {{pokemon.name}}">
           
         </div>
+    </div>
+
+    <div ng-controller="getPokemon">
+
     </div>
 
     <script src="controllers/pokemon-controller.js"></script>
