@@ -7,3 +7,5 @@ Routing
 - ng-view : is a directive that angular uses a container to switch views. 
 
 - $routeParms : is a service that allows you to access the current set of route params.
+
+Singleton: the one and only copy of an object.

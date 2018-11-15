@@ -20,8 +20,12 @@
         
       
 }])
-.controller("mainController",["$scope", function($scope) {
+.service("greetingService", function(){
+    this.greeting = "hello";
+})
+.controller("mainController",["$scope", "$log", "greetingService", function($scope, $log, greetingService) {
     $scope.messages ="Main Page, yup";
+    $log.log(greetingService.greeting);
 }])
 .controller("secondController", ["$scope", function($scope){
     $scope.messages = "Second Page"
