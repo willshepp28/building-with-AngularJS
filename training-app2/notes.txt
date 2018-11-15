@@ -1,0 +1,7 @@
+Routing
+
+ - NgRoute is a routing service that helps us route whatevers in a hash, and run the proper code.
+
+ - $routeProvider lets us specifiy routes
+
+- ng-view : is a directive that angular uses a container to switch views.
